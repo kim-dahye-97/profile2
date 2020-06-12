@@ -1,0 +1,21 @@
+//구글폰트 Noto Sans KR
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700,900&display=swap&subset=korean");
+
+//icon-font
+//https://material.io/icons
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+//기본 설정-------------------------------------------
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; //10px = 1rem으로 지정
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
