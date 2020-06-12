@@ -1,0 +1,26 @@
+@mixin clearfix(){
+    &::after{
+        content:'';
+        display:block;
+        clear: both;
+    }
+}
+
+// 미디어쿼리
+@mixin mq($screen-width) {
+    @if $screen-width == "1200" {
+        @media screen and (max-width:1200px){
+            @content;
+        }
+    }    
+    @else if $screen-width == "980" {
+        @media screen and (max-width:980px){
+            @content;
+        }
+    }
+    @else if $screen-width == "600" {
+        @media screen and (max-width:600px){
+            @content;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.nav{
+    &-checkbox{
+        display: none;
+    }
+    &-button{
+        background-color:$color-secondary;
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        top:7rem;
+        right: 4rem;
+        z-index: 2000;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 1rem 1rem rgba(#000,0.1);
+        text-align: center;
+    }
+
+    &-bg{
+        background-image: radial-gradient($color-primary, $color-yellow-1);
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        top:7rem;
+        right: 4rem;
+        z-index: 1000;
+        border-radius: 7rem;
+        transition: all .7s;
+    }
+
+
+    &-checkbox:checked~ &-bg{ //checkbox가 체크된 상태일 때, 같은 형제 요소인 checkbox-bg
+        transform:scale(80);
+    }
+
+    &-icon{
+        position: relative;
+        margin-top:30px;
+
+        &::before{
+            top:-0.8rem;
+        }
+
+        &::after{
+            top:0.8rem;
+        }
+
+        &::before, &::after{
+            content:'';
+            position: absolute;
+            left:0;
+            transition: all .2s;
+        }
+
+        &, &::before, &::after{
+            display:inline-block;
+            width:3rem;
+            height:2px;
+            background-color:#eaeaea;
+        }
+    }
+
+    &-button:hover &-icon::before{
+        top:-1rem;
+    }
+
+    &-button:hover &-icon::after{
+        top:1rem;
+    }
+
+
+//메뉴 삼선 버튼 애니메이션 효과
+
+    &-checkbox:checked~&-button &-icon{//checkbox가 체크됐을 때, 메뉴삼선 가운데
+        background-color: transparent;
+    }
+
+    &-checkbox:checked~&-button &-icon::before{//checkbox가 체크됐을 때, 메뉴삼선 before
+        top:0;
+        transform: rotate(135deg);
+    }
+    &-checkbox:checked~&-button &-icon::after{//checkbox가 체크됐을 때, 메뉴삼선 after
+        top:0;
+        transform: rotate(-135deg);
+    }
+
+    
+    //메뉴 리스트
+    &-body{
+        position:fixed;
+        top: 0;
+        left:-120%;
+        width:100vw;
+        height:100vh;
+        z-index: 1500;
+        transition: all .8s;
+        opacity: 0;
+    }
+
+    &-list{
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        list-style:none;
+        width:100%;
+        text-align: center;
+    }
+
+    &-link{
+        display:inline-block;
+        font-size: 3rem;
+        font-weight: 400;
+        padding:1rem 2rem;
+        color:$color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .6s;
+        background-image:linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        background-size: 230%;
+
+        &:hover{
+            color:$color-primary;
+            background-position: 100%;
+        }
+
+        span{
+            display: inline-block;
+            margin-right:1.5rem;
+        }
+    }
+
+    &-checkbox:checked~&-body{
+        left:0;
+        opacity: 1;
+    }
+}
