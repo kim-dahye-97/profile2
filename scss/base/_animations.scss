@@ -1,0 +1,32 @@
+@keyframes moveInLeft{ /*왼쪽에서 오른쪽으로 애니메이션*/
+    0%{
+        opacity: .1;
+        transform: translateX(-8rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight{ /*오른쪽에서 왼쪽으로 애니메이션*/
+    0%{
+        opacity: .1;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
