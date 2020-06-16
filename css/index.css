@@ -208,7 +208,7 @@ main::after {
 }
 
 main #section-about {
-  padding: 20rem 6rem;
+  padding: 12rem 6rem;
   float: left;
   width: 66.6666%;
   height: 100%;
@@ -222,7 +222,7 @@ main #section-about::after {
 
 @media screen and (max-width: 1200px) {
   main #section-about {
-    padding-top: 10rem;
+    padding-top: 5rem;
     padding-bottom: 30rem;
   }
 }
@@ -252,18 +252,27 @@ main #section-about .about {
   }
 }
 
+main #section-about .about li:nth-child(2) .about-txtbox-tit {
+  margin-top: 8rem;
+}
+
+@media screen and (max-width: 1200px) {
+  main #section-about .about li:nth-child(2) .about-txtbox-tit {
+    margin-top: 4rem;
+  }
+}
+
 main #section-about .about-txtbox-tit {
   margin-top: 5rem;
   margin-bottom: 2rem;
   color: #222;
   font-size: 1.6rem;
   font-weight: 800;
-  text-transform: uppercase;
 }
 
 main #section-about .about-txtbox-txt {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: justify;
   color: #555;
 }
@@ -304,7 +313,7 @@ main #section-about-photo .photo:hover {
 
 main #section-about-photo .photo:nth-child(1) {
   left: 1rem;
-  top: 5rem;
+  top: 15rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -321,7 +330,7 @@ main #section-about-photo .photo:nth-child(1) {
 }
 
 main #section-about-photo .photo:nth-child(2) {
-  top: 18rem;
+  top: 30rem;
   right: 0;
 }
 

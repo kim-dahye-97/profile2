@@ -3,7 +3,7 @@ main{
     @include clearfix();
 
     #section-about{
-        padding:20rem 6rem;
+        padding:12rem 6rem;
         float:left;
         width:66.6666%;
         height: 100%;
@@ -11,7 +11,7 @@ main{
         @include clearfix();
 
         @include mq('1200'){
-            padding-top: 10rem;
+            padding-top: 5rem;
             padding-bottom: 30rem;
          }
          
@@ -32,6 +32,18 @@ main{
             @include mq('1200'){
                     width: 100%;
             }
+            
+           //about 두번째 li 박스
+           li:nth-child(2){
+                .about-txtbox-tit{
+                    margin-top: 8rem;
+
+                    @include mq('1200'){
+                        margin-top: 4rem;
+                    }
+
+                }
+           }
 
             &-txtbox{
                 &-tit{
@@ -40,12 +52,11 @@ main{
                     color:$color-grey-dark;
                     font-size:1.6rem;
                     font-weight: 800;
-                    text-transform: uppercase;
                 }
 
                 &-txt{
                     font-size:1.4rem;
-                    font-weight: 700;
+                    font-weight: 500;
                     text-align: justify;
                     color: $color-grey;
                 }
@@ -82,7 +93,7 @@ main{
                     //사진 style
                     &:nth-child(1){
                         left:1rem;
-                        top:5rem;
+                        top:15rem;
                         @include mq('1200'){
                             top:5rem;
                             left: 2rem;
@@ -94,7 +105,7 @@ main{
                     }
 
                     &:nth-child(2){
-                        top: 18rem;
+                        top: 30rem;
                         right: 0;
 
                         @include mq('1200'){
