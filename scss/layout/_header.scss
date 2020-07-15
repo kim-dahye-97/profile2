@@ -7,10 +7,10 @@ header{
 
     #header-deco{
         position: relative;
-        width: 30rem;
-        height: 40rem;
+        width: 25rem;
+        height: 35rem;
         background: $color-secondary;
-        top: 30%;
+        top: 29%;
         left:5%;
 
         @include mq('600'){
@@ -22,7 +22,7 @@ header{
             display: block;
             background:$color-primary;
             position: absolute;
-            top: 3.5rem;
+            top: 2.5rem;
             left:4.5rem;
             width: 85%;
             height: 100%;
@@ -49,8 +49,8 @@ header{
          }
 
         &-main{
-           font-size: 7.2rem;
-           line-height: 7.2rem;
+           font-size: 6rem;
+           line-height: 6rem;
            animation: moveInRight 1s backwards;
            animation-delay: .3s;
 
